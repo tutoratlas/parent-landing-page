@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutor Atlas - Home Tuition Clarity for Singapore Parents & Students</title>
+  <meta name="description" content="A shared workspace for families and tutors to track schedules, payments, and progress for private tuition—in one place.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+</head>
+<body>
+  <!-- Sticky Header -->
+  <header id="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">Tutor Atlas</div>
+        <nav id="nav">
+          <a href="#solution">Solution</a>
+          <a href="#features">Features</a>
+          <a href="#marketplace">Marketplace</a>
+          <a href="#faq">FAQ</a>
+          <a href="#join" class="nav-cta">Join</a>
+        </nav>
+        <button id="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container">
+      <div class="pill">For Singapore parents & students</div>
+      <h1>Home tuition clarity—without the WhatsApp chaos.</h1>
+      <p class="subheadline">A shared workspace for families and tutors to track schedules, payments, and progress for private tuition—in one place.</p>
+      <p class="credibility">Early access is limited—we're building this with a small group of parents and students.</p>
+      
+      <div class="cta-group">
+        <button class="btn btn-primary" onclick="scrollToJoin()">Join Early Access</button>
+        <button class="btn btn-secondary" onclick="scrollToJoin()">Book a 15–30 min Feedback Call</button>
+      </div>
+      <p class="under-cta">No spam. We'll reply within 48 hours.</p>
+
+      <!-- Persona Toggle -->
+      <div class="persona-toggle">
+        <button class="persona-tab active" data-persona="parent">Parent/Guardian</button>
+        <button class="persona-tab" data-persona="student">Student</button>
+      </div>
+
+      <div class="persona-content">
+        <ul id="parent-bullets" class="persona-bullets active">
+          <li>Know what's been taught and what's next—especially when schedules change.</li>
+          <li>Track reschedules and makeup lessons without confusion.</li>
+          <li>Get payment clarity and reminders so you never forget again.</li>
+        </ul>
+        <ul id="student-bullets" class="persona-bullets">
+          <li>See upcoming lessons and changes at a glance.</li>
+          <li>Keep a simple record of what you covered and what to revise.</li>
+          <li>Tell us if you'd want ad-hoc crash-course tuition (1–3 months) before major exams.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section id="problem">
+    <div class="container">
+      <h2>It's not tuition options you lack. It's trust and clarity.</h2>
+      <p class="section-body">Home/private tuition can be 1:1 or small-group—and it often runs on scattered WhatsApp messages, incomplete notes, and inconsistent updates. It's hard to verify claims, hard to stay aligned, and easy for misunderstandings to happen.</p>
+      
+      <ul class="pain-bullets">
+        <li>Hard to verify tutor quality beyond marketing claims.</li>
+        <li>Progress feels unclear: what was covered, what improved, what's next?</li>
+        <li>Reschedules get messy across CCAs and family calendars.</li>
+        <li>Payment totals and lesson counts get disputed at month-end.</li>
+        <li>When tutors change, continuity gets lost.</li>
+      </ul>
+
+      <div class="section-cta">
+        <button class="btn btn-primary" onclick="scrollToJoin()">Join Early Access</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section id="solution">
+    <div class="container">
+      <h2>Tutor Atlas turns home tuition into one shared record.</h2>
+      <p class="lead">We're starting with three essentials we believe families care about most:</p>
+      
+      <div class="cards">
+        <div class="card">
+          <h3>Scheduler Tracker</h3>
+          <p>Upcoming lessons, reschedules, cancellations, and attendance—kept in one place.</p>
+        </div>
+        <div class="card">
+          <h3>Payment Logger</h3>
+          <p>A clear log of lessons and payments with running totals, plus reminders—so everyone agrees and nobody forgets.</p>
+        </div>
+        <div class="card">
+          <h3>Student Records</h3>
+          <p>Topics covered, results history, and exam milestones—so tuition stays accountable and continuous.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <div class="container">
+      <h2>Built for real family life in Singapore</h2>
+      
+      <div class="feature-cards">
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3>Scheduler Tracker</h3>
+          <p>Keep track of upcoming lessons, reschedules, cancellations, and attendance in one organized place. No more scattered WhatsApp messages or calendar confusion.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Payment Logger</h3>
+          <p>Clear logs of lessons and payments with running totals and reminders. Everyone stays on the same page, and nobody forgets to pay.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📚</div>
+          <h3>Student Records</h3>
+          <p>Track topics covered, results history, and exam milestones. Keep tuition accountable and maintain continuity even when tutors change.</p>
+        </div>
+      </div>
+
+      <p class="footnote">We're intentionally starting small. Your feedback decides what we build next.</p>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works">
+    <div class="container">
+      <h2>How it works (simple)</h2>
+      
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <p>Create a lightweight student profile (no full addresses; learning context only).</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <p>Each lesson updates the schedule, payment record, and progress notes.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <p>At any time, parent/student can see: what happened, what's next, and what's been paid.</p>
+        </div>
+      </div>
+
+      <p class="privacy-reminder">Don't submit sensitive personal data.</p>
+    </div>
+  </section>
+
+  <!-- Marketplace Section -->
+  <section id="marketplace">
+    <div class="container">
+      <div class="coming-later-badge">Coming later</div>
+      <h2>Coming later: the Grab for home tuition</h2>
+      
+      <div class="marketplace-content">
+        <p class="highlight">We are not a tuition agency. We're a tech-first app.</p>
+        <p class="highlight">Long term, we want to build the Grab for home tuition—a direct marketplace without a middleman—starting with ad-hoc exam crash-courses.</p>
+        
+        <p>Many great tutors aren't visible on agency platforms—they operate via referrals and word-of-mouth. If we can build a daily tool tutors actually use, we can attract more quality tutors and later open a marketplace so families can access them beyond their social networks.</p>
+        
+        <div class="interest-prompts">
+          <div class="interest-item">
+            <span class="check-icon">✓</span>
+            <p>I'm interested in a direct marketplace (no middleman/agent).</p>
+          </div>
+          <div class="interest-item">
+            <span class="check-icon">✓</span>
+            <p>I'm interested in ad-hoc crash-course tuition (1–3 months) before major exams.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cohort Section -->
+  <section id="cohort">
+    <div class="container">
+      <h2>Join the Founding Family Cohort</h2>
+      <p class="section-body">We're interviewing a small group of Singapore parents and students to identify the top 1–2 pains and shape Tutor Atlas for families.</p>
+      
+      <ul class="cohort-benefits">
+        <li>Early access invites</li>
+        <li>Direct influence on what ships first</li>
+        <li>First priority for marketplace pilots (when ready)</li>
+      </ul>
+
+      <div class="section-cta">
+        <button class="btn btn-primary" onclick="scrollToJoin()">Join Early Access</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>Are you a tuition agency?</h3>
+          <p>No. Tutor Atlas is a tech-first app. We're building tools that make private tuition clearer and more professional. A marketplace may come later—only if families want it.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>What do you mean by "Grab for home tuition"?</h3>
+          <p>Like Grab connects drivers and passengers directly, we want to connect families and tutors directly—without agency fees or middlemen. But first, we need to build tools that tutors actually use daily.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Do I need to change tutors to use this?</h3>
+          <p>No. This is designed to work even with your current tutor.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>What personal data do you collect?</h3>
+          <p>Only what's needed to contact you and understand what matters. Please do not submit NRIC, full DOB, home address, or school name.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Will you sell our data or spam us?</h3>
+          <p>No. We do not sell personal data. We only contact you about early access, interviews, and relevant updates.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Students are under 18—how will this work?</h3>
+          <p>If you're a student under 18, we'll require a parent/guardian contact and consent before we proceed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join / Form Section -->
+  <section id="join">
+    <div class="container">
+      <h2>Join Early Access</h2>
+      <p class="form-helper">We'll reply within 48 hours.</p>
+      
+      <form id="contact-form">
+        <!-- Role -->
+        <div class="form-group">
+          <label class="required">I am a:</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="role" value="parent" required>
+              <span>Parent/Guardian</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="role" value="student" required>
+              <span>Student</span>
+            </label>
+          </div>
+          <div class="error-message" id="role-error"></div>
+        </div>
+
+        <!-- Age Group (Student only) -->
+        <div class="form-group" id="age-group-field" style="display: none;">
+          <label class="required">Age group:</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="age_group" value="under_18">
+              <span>Under 18</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="age_group" value="18_plus">
+              <span>18+</span>
+            </label>
+          </div>
+          <div class="error-message" id="age-group-error"></div>
+        </div>
+
+        <!-- Name -->
+        <div class="form-group">
+          <label for="name" class="required">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <div class="error-message" id="name-error"></div>
+        </div>
+
+        <!-- Parent/Guardian WhatsApp -->
+        <div class="form-group" id="parent-whatsapp-field">
+          <label for="parent_whatsapp">Parent/Guardian WhatsApp:</label>
+          <input type="tel" id="parent_whatsapp" name="parent_whatsapp" placeholder="+65">
+          <div class="error-message" id="parent-whatsapp-error"></div>
+        </div>
+
+        <!-- Parent/Guardian Email -->
+        <div class="form-group" id="parent-email-field">
+          <label for="parent_email">Parent/Guardian Email:</label>
+          <input type="email" id="parent_email" name="parent_email">
+          <div class="error-message" id="parent-email-error"></div>
+        </div>
+
+        <!-- Student Telegram -->
+        <div class="form-group" id="student-telegram-field" style="display: none;">
+          <label for="student_telegram" class="required">Student Telegram handle:</label>
+          <input type="text" id="student_telegram" name="student_telegram" placeholder="@username">
+          <div class="error-message" id="student-telegram-error"></div>
+        </div>
+
+        <!-- Level -->
+        <div class="form-group">
+          <label for="level">Level:</label>
+          <select id="level" name="level">
+            <option value="">Select level</option>
+            <option value="primary">Primary</option>
+            <option value="secondary">Secondary</option>
+            <option value="jc">JC</option>
+            <option value="ib">IB/International</option>
+            <option value="other">Other</option>
+          </select>
+          <div class="error-message" id="level-error"></div>
+        </div>
+
+        <!-- Subjects Needed -->
+        <div class="form-group">
+          <label for="subjects_needed">Subjects needed:</label>
+          <input type="text" id="subjects_needed" name="subjects_needed" placeholder="e.g., Math, Physics">
+          <div class="error-message" id="subjects-error"></div>
+        </div>
+
+        <!-- Current Situation -->
+        <div class="form-group">
+          <label for="current_situation">Current situation:</label>
+          <select id="current_situation" name="current_situation">
+            <option value="">Select one</option>
+            <option value="have_tutor">Already have a tutor</option>
+            <option value="looking">Looking for a tutor</option>
+            <option value="not_sure">Not sure yet</option>
+          </select>
+          <div class="error-message" id="situation-error"></div>
+        </div>
+
+        <!-- Biggest Pain -->
+        <div class="form-group">
+          <label for="biggest_pain">Biggest pain:</label>
+          <select id="biggest_pain" name="biggest_pain">
+            <option value="">Select one</option>
+            <option value="verify_quality">Verifying tutor quality / credentials</option>
+            <option value="progress_clarity">Knowing if tuition is working (progress clarity)</option>
+            <option value="rescheduling">Rescheduling / coordination hassle</option>
+            <option value="payments">Payment tracking / disputes</option>
+            <option value="outside_network">Finding a tutor outside my network</option>
+            <option value="adhoc_exam">Need ad-hoc crash-course help before exams</option>
+            <option value="other">Other</option>
+          </select>
+          <div class="error-message" id="pain-error"></div>
+        </div>
+
+        <!-- Top Priority -->
+        <div class="form-group">
+          <label for="top_priority">Top priority:</label>
+          <select id="top_priority" name="top_priority">
+            <option value="">Select one</option>
+            <option value="scheduler">Scheduler Tracker</option>
+            <option value="payments">Payment Logger</option>
+            <option value="records">Student Records</option>
+            <option value="marketplace_direct">Direct marketplace (coming later)</option>
+            <option value="marketplace_adhoc">Ad-hoc crash-course matching (coming later)</option>
+          </select>
+          <div class="error-message" id="priority-error"></div>
+        </div>
+
+        <!-- Optional Notes -->
+        <div class="form-group">
+          <label for="optional_notes">Optional notes:</label>
+          <textarea id="optional_notes" name="optional_notes" rows="4" placeholder="Anything else you'd like to share?"></textarea>
+        </div>
+
+        <!-- Checkboxes -->
+        <div class="form-group checkbox-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="call_opt_in" id="call_opt_in">
+            <span>I'm open to a 15–30 min feedback call</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="willingness_to_pay_opt_in" id="willingness_to_pay_opt_in">
+            <span>I'd consider paying for a product that solves my #1 pain</span>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="receive_updates_opt_in" id="receive_updates_opt_in">
+            <span>Keep me updated on Tutor Atlas</span>
+          </label>
+        </div>
+
+        <!-- Consent -->
+        <div class="form-group consent-group">
+          <label class="checkbox-label">
+            <input type="checkbox" name="consent_general" id="consent_general" required>
+            <span class="consent-text">By submitting this form, you consent to Tutor Atlas collecting, using and disclosing your personal data (such as name and contact details) to contact you about early access, user interviews and related updates, and to administer your request. You may withdraw your consent at any time by contacting our <a href="#" id="dpo-link">DPO</a>.</span>
+          </label>
+          <div class="error-message" id="consent-general-error"></div>
+        </div>
+
+        <!-- Minor Consent (Student under 18 only) -->
+        <div class="form-group consent-group" id="minor-consent-field" style="display: none;">
+          <label class="checkbox-label">
+            <input type="checkbox" name="consent_minor" id="consent_minor">
+            <span class="consent-text">I confirm I have my parent/guardian's consent to submit this form, and I agree that Tutor Atlas may contact my parent/guardian about early access and interviews.</span>
+          </label>
+          <div class="error-message" id="consent-minor-error"></div>
+        </div>
+
+        <div class="policy-links">
+          <a href="#" id="privacy-link" target="_blank">Privacy Policy</a> | 
+          <a href="#" id="terms-link" target="_blank">Terms of Use</a>
+        </div>
+
+        <p class="privacy-reminder">Don't submit sensitive personal data.</p>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">Submit</button>
+        
+        <div id="form-message" class="form-message"></div>
+        <div id="fallback-message" class="fallback-message" style="display: none;">
+          Form submission is not configured. Please email us at <a href="#" id="contact-email-link"></a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">Tutor Atlas</div>
+          <p>Home tuition clarity for Singapore families</p>
+        </div>
+        <div class="footer-links">
+          <a href="#" id="footer-privacy-link" target="_blank">Privacy Policy</a>
+          <a href="#" id="footer-terms-link" target="_blank">Terms of Use</a>
+          <a href="#" id="footer-contact-link">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tutor Atlas. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
