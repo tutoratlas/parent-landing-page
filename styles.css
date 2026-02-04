@@ -1026,3 +1026,55 @@ textarea.error {
 .mb-2 { margin-bottom: 1rem; }
 .mb-3 { margin-bottom: 1.5rem; }
 .mb-4 { margin-bottom: 2rem; }
+
+/* Mockup Images */
+.mockup-image {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.mockup-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mockup-image img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.mockup-caption {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #64748b;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Marketplace mockup specific styling */
+.marketplace-mockup {
+  margin: 32px auto;
+  max-width: 400px;
+}
+
+/* Responsive mockup sizing */
+@media (max-width: 768px) {
+  .mockup-image img {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  .marketplace-mockup {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mockup-image img {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+}
