@@ -468,51 +468,14 @@
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwB_NNdS8Ct4H-GUES75DcJwTNuCxXXTaXiW7pJtIAMnLPMIE8-CxkSW_z4-B29vm22/exec";
-
-    document.getElementById("join-form").addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      const form = e.target;
-      const formData = new FormData(form);
-
-      // Custom validation: at least one contact method
-      if (!formData.get("whatsapp") && !formData.get("email")) {
-        alert("Please provide WhatsApp or Email.");
-        return;
-      }
-
-      const payload = {};
-      formData.forEach((value, key) => {
-        payload[key] = value;
-      });
-
-      // Handle checkboxes (unchecked = false)
-      ["interviewOptIn", "willingnessToPayOptIn", "receiveUpdates"].forEach(key => {
-        payload[key] = formData.has(key);
-      });
-
-      try {
-        const res = await fetch(SCRIPT_URL, {
-          method: "POST",
-          body: JSON.stringify(payload),
-          headers: { "Content-Type": "application/json" }
-        });
-
-        const data = await res.json();
-
-        if (data.success) {
-          alert("🎉 Thanks for joining! We'll be in touch.");
-          form.reset();
-        } else {
-          throw new Error(data.error);
-        }
-      } catch (err) {
-        console.error(err);
-        alert("Something went wrong. Please try again later.");
-      }
-    });
-  </script>
 </body>
 </html>
+  <script>
+    window.TA_CONFIG = {
+      FORM_POST_URL: "https://script.google.com/macros/s/AKfycbwB_NNdS8Ct4H-GUES75DcJwTNuCxXXTaXiW7pJtIAMnLPMIE8-CxkSW_z4-B29vm22/exec",
+      CONTACT_EMAIL: "hello@tutoratlas.sg",
+      PRIVACY_URL: "privacy.html",
+      TERMS_URL: "terms.html",
+      DPO_EMAIL: "dpo@tutoratlas.sg"
+    };
+  </script>

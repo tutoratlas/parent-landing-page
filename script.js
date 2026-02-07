@@ -1,3 +1,4 @@
+console.log("Script loaded");
 // ===========================
 // Initialize on DOM load
 // ===========================
@@ -366,24 +367,29 @@ function submitForm(payload) {
   // Submit via fetch
   fetch(window.TA_CONFIG.FORM_POST_URL, {
     method: 'POST',
-    mode: 'no-cors', // For Google Apps Script
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'text/plain;charset=utf-8'
     },
     body: JSON.stringify(payload)
   })
-  .then(() => {
-    // Optimistic success (no-cors doesn't return response)
-    formMessage.className = 'form-message success';
-    formMessage.textContent = 'Thank you! We\'ll reply within 48 hours.';
-    
-    // Reset form
-    document.getElementById('contact-form').reset();
-    
-    // Hide conditional fields
-    document.getElementById('age-group-field').style.display = 'none';
-    document.getElementById('student-telegram-field').style.display = 'none';
-    document.getElementById('minor-consent-field').style.display = 'none';
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
+      formMessage.className = 'form-message success';
+      formMessage.textContent = 'Thank you! We\'ll reply within 48 hours.';
+      
+      // Reset form
+      document.getElementById('contact-form').reset();
+      
+      // Hide conditional fields
+      document.getElementById('age-group-field').style.display = 'none';
+      document.getElementById('student-telegram-field').style.display = 'none';
+      document.getElementById('minor-consent-field').style.display = 'none';
+    } else {
+      formMessage.className = 'form-message error';
+      formMessage.textContent = 'Something went wrong. Please try again or email us at ' + window.TA_CONFIG.CONTACT_EMAIL;
+      console.error('Form submission error:', data.error);
+    }
     
     // Re-enable button
     submitBtn.disabled = false;
